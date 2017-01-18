@@ -14,16 +14,53 @@ public void setup()
     }
   }
 }
+public String reverse(String sWord)
+{
+    String word = new String();
+    int sLast = sWord.length()-1;
+    for(int i = sLast; i > -1; i--)
+    {
+      word = word + sWord.substring(i,i+1);
+    }
+    return word;
+}
+public String noSpace(String sWord)
+{
+  String word = new String();
+  for (int i = 0; i<sWord.length();i++)
+  {
+    if (Character.isLetter(sWord.charAt(i))== true)
+    {
+      return word = word + sWord.substring(i);
+    }
+  }
+  return word;
+}
+public String numLetters(String sWord){
+  String word = new String();
+  for (int i = 0; i<sWord.length(); i++)
+  {
+    if (Character.isLetter(sWord.charAt(i)) == true)
+    {
+      word = word + sWord.charAt(i);
+    }
+  }
+  return word;
+}
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
+}
 public boolean palindrome(String word)
 {
-  //your code here
+  String r = new String();
+  int nLast = word.length()-1;
+  for (int i = nLast; i > -1; i--)
+  {
+    r = r + word.substring(i,i+1);
+  }
+  if (word.equals(r))
+  {
+    return true;
+  }
   return false;
 }
-public String reverse(String str)
-{
-    String sNew = new String();
-    //your code here
-    return sNew;
-}
-
-
